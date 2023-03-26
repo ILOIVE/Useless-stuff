@@ -53,7 +53,9 @@ def getting_tags():
 
 def dump_tag():
     with open("dump.txt", "a" , encoding="utf-8") as f :
-        f.write(f"{tag_filter}\n\n")
+        for i in tag_filter:
+            f.write(f"{i}\n")
+            f.write("------------\n")
         f.close()
 
 def move_files():
